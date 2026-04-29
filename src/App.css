@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: monospace;
+  background: #06141b;
+  color: #cde7f0;
+}
+
+/* BACKGROUND GRID */
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background-image: linear-gradient(#0a2a33 1px, transparent 1px),
+    linear-gradient(90deg, #0a2a33 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* PANEL */
+.panel {
+  width: 900px;
+  background: #06171d;
+  padding: 20px;
+  border: 1px solid #0a2a33;
+}
+
+/* HEADER */
+.header h1 {
+  font-size: 40px;
+}
+.header span {
+  color: #00ffe0;
+}
+
+/* ADD BAR */
+.add-bar {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+.add-bar input {
+  flex: 1;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid #00ffe0;
+  color: white;
+}
+.add-bar button {
+  border: 1px solid #00ffe0;
+  background: transparent;
+  color: #00ffe0;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  gap: 10px;
+}
+.card {
+  flex: 1;
+  padding: 20px;
+  background: #071c22;
+  border: 1px solid #0a2a33;
+  position: relative;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: #00ffe0;
+  transition: 0.3s;
+}
+.card:hover::after {
+  width: 100%;
+}
+
+/* TABLE */
+.table-header,
+.row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  padding: 12px;
+}
+.table-header {
+  background: #0a2a33;
+}
+.row {
+  border-top: 1px solid #0a2a33;
+}
+
+/* LEFT BORDER */
+.row-pass {
+  border-left: 3px solid #00ff9f;
+}
+.row-fail {
+  border-left: 3px solid #ff4d6d;
+}
+
+/* TEXT */
+.score-text {
+  color: #ffc857;
+}
+
+/* BADGE */
+.badge {
+  padding: 4px 10px;
+  border: 1px solid;
+}
+.pass {
+  color: #00ff9f;
+}
+.fail {
+  color: #ff4d6d;
+}
+
+/* UPDATE */
+.update-box {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.score-value {
+  padding: 6px 10px;
+  border: 1px solid #0a2a33;
+}
+.arrows {
+  display: flex;
+  flex-direction: column;
+}
+.arrows button {
+  width: 20px;
+  height: 18px;
+  background: #0b1f26;
+  border: 1px solid #0a2a33;
+  color: white;
+}
+.save-btn {
+  border: 1px solid #0a2a33;
+  background: transparent;
+  color: white;
+  padding: 5px 10px;
+}
